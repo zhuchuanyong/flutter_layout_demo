@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout_demo/pages/clip/index.dart';
 import 'package:flutter_layout_demo/pages/controller/index.dart';
+import 'package:flutter_layout_demo/pages/row/index.dart';
 
 void main() => runApp(MyApp());
 
@@ -60,10 +61,11 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 // 路由名称
-const routerName = ["Controller 例子", "圆角 例子"];
+const routerName = ["Row布局", "Controller 例子", "圆角 例子"];
 
 // 路由表
 Map<String, WidgetBuilder> routers = {
+  "row": (context) => RowPage(),
   'controller': (context) => ControllerDemoPage(),
   'clip': (context) => ClipDemoPage(),
 };
