@@ -19,3 +19,13 @@ Map<String, WidgetBuilder> routers = {
   'controller': (context) => ControllerDemoPage(),
   'clip': (context) => ClipDemoPage(),
 };
+
+List routerListOne = [
+  'row',
+  'Column',
+  "flex",
+  "wrap",
+  "stack Position",
+  "align"
+];
+List routerListtwo = ['controller', 'clip'];
