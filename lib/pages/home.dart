@@ -35,22 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// 路由名称
-const routerName = [
-  "Row布局",
-  "Column布局",
-  "flex布局",
-  "Wrap",
-  "stack Position",
-  "align ",
-  "Controller 例子",
-  "圆角 例子"
-];
-
 class ExpansionList extends StatefulWidget {
   final String title;
   List listdata = [];
   List routeName = [];
+
 
   ExpansionList({Key key, this.title, this.listdata, this.routeName})
       : super(key: key);
@@ -60,7 +49,6 @@ class ExpansionList extends StatefulWidget {
 }
 
 class _ExpansionListState extends State<ExpansionList> {
-  List mylist = [1, 2, 3];
   @override
   Widget build(BuildContext context) {
     return Container(
