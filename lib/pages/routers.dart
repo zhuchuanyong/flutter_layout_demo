@@ -21,25 +21,17 @@ Map<String, WidgetBuilder> routers = {
   'controller': (context) => ControllerDemoPage(),
   'clip': (context) => ClipDemoPage(),
 };
-
-List routerListOne = [
-  "text",
-  'row',
-  'Column',
-  "flex",
-  "wrap",
-  "stack Position",
-  "align"
-];
-
 //   "Controller 例子",
 //   "圆角 例子"
-// List routerListOneName = [
-//   {"name": 'Row布局', 'pathName': 'row'},
-//   {"name": 'Column布局', 'pathName': 'Column'},
-//   {"name": 'flex布局', 'pathName': 'flex'},
-//   {"name": 'Wrap', 'pathName': 'wrap'},
-//   {"name": 'stack Position', 'pathName': 'stack Position'},
-//   {"name": 'align', 'pathName': 'align'},
-// ];
-List routerListtwo = ['controller', 'clip'];
+List routerListOneName = [
+  {"name": 'Row布局', 'pathName': 'row'},
+  {"name": 'Column布局', 'pathName': 'Column'},
+  {"name": 'flex布局', 'pathName': 'flex'},
+  {"name": 'Wrap', 'pathName': 'wrap'},
+  {"name": 'stack Position', 'pathName': 'stack Position'},
+  {"name": 'align', 'pathName': 'align'},
+];
+List routerListtwo = [
+  {"name": 'Controller 例子', 'pathName': 'controller'},
+  {"name": '圆角 例子', 'pathName': 'clip'},
+];
