@@ -19,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: <Widget>[
               ExpansionList(
-                title: 'My demo',
+                title: 'Widget demo',
                 routeInfo: routerListOneName,
               ),
               ExpansionList(
