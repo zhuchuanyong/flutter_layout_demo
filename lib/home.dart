@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_demo/widget/image.dart';
+import 'package:flutter_layout_demo/widget/tab.dart';
+import 'package:flutter_layout_demo/widget/text.dart';
 import 'widget/button.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -14,19 +17,16 @@ class _MainHomePageState extends State<MainHomePage> {
           context, MaterialPageRoute(builder: (context) => ButtonPage()));
     }),
     new ListItem(Icons.text_fields, "文字", "简单的文字使用", (context) {
-      Scaffold.of(context).showSnackBar(SnackBar(
-        content: Text('点击title2'),
-      ));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => TextPage()));
     }),
     new ListItem(Icons.image, "图片", "简单的图片使用", (context) {
-      Scaffold.of(context).showSnackBar(SnackBar(
-        content: Text('点击title3'),
-      ));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ImagePage()));
     }),
     new ListItem(Icons.tab, "选项卡", "简单的选项卡使用", (context) {
-      Scaffold.of(context).showSnackBar(SnackBar(
-        content: Text('点击title3'),
-      ));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => TabPage()));
     }),
   ];
   @override
