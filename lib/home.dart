@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_layout_demo/ViewPageItem.dart';
 import 'package:flutter_layout_demo/router/route.dart';
+import 'package:flutter_layout_demo/view/ViewPageItem.dart';
 
 class MainHomePage extends StatefulWidget {
   final String title = "Flutter学习";
