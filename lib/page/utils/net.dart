@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_demo/utils/http.dart';
 
 class NetRequestPage extends StatefulWidget {
   final String title = "网络请求";
@@ -7,6 +8,23 @@ class NetRequestPage extends StatefulWidget {
 }
 
 class _NetRequestPageState extends State<NetRequestPage> {
+  String json = "";
+  void doGet() {
+    XHttp.get("/weather/current/南京市").then((response) {
+      setState(() {
+        json = response.toString();
+      });
+    });
+  }
+
+  void doParam() {
+    XHttp.get("/music/singer/search/", {"keyWord": "周杰伦"}).then((response) {
+      setState(() {
+        json = response.toString();
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,15 +43,21 @@ class _NetRequestPageState extends State<NetRequestPage> {
                 RaisedButton(
                   child: Text('Get请求'),
                   color: Colors.blue,
-                  onPressed: () => {},
+                  onPressed: () {
+                    doGet();
+                  },
                 ),
                 RaisedButton(
                   child: Text('post请求'),
                   color: Colors.blue,
-                  onPressed: () => {},
+                  onPressed: () {
+                    doParam();
+                  },
                 ),
               ],
             ),
+            Text('网络请求结果：\n$json',
+                style: TextStyle(fontSize: 14), textAlign: TextAlign.left),
           ],
         ),
       ),
