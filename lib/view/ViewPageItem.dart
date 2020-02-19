@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_demo/router/switch_animation.dart';
 
 class ViewPageItem extends StatefulWidget {
   ViewPageItem({Key key, this.items}) : super(key: key);
@@ -30,8 +31,10 @@ class _ViewPageItemState extends State<ViewPageItem> {
               enabled: true, // 是否点击禁用状态
               selected: false, // item 是否选中状态
               onTap: () {
-                Navigator.of(context)
-                    .pushNamed(widget.items[index].pageName); // item onTap 点击事件
+                // Navigator.of(context)
+                //     .pushNamed(widget.items[index].pageName); // item onTap 点击事件
+                Navigator.push(
+                    context, SlidePageRoute(widget.items[index].pageName));
               },
               onLongPress: () {
                 print('长按:$index');
