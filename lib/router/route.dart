@@ -3,6 +3,7 @@ import 'package:flutter_layout_demo/home.dart';
 import 'package:flutter_layout_demo/page/utils/mmkv.dart';
 import 'package:flutter_layout_demo/page/utils/net.dart';
 import 'package:flutter_layout_demo/page/utils/shared_preferences.dart';
+import 'package:flutter_layout_demo/page/utils/sqlite.dart';
 import 'package:flutter_layout_demo/page/utils/toast.dart';
 import 'package:flutter_layout_demo/page/widget/button.dart';
 import 'package:flutter_layout_demo/page/widget/image.dart';
@@ -29,6 +30,7 @@ class RouteMap {
     '/utils/mmkv': (BuildContext context) => new MMKVPage(),
     '/utils/shared_preferences': (BuildContext context) =>
         new SharedPreferencesPage(),
+    '/utils/sqlite': (BuildContext context) => new SqlitePage(),
   };
 
   // 组件列表
@@ -47,6 +49,8 @@ class RouteMap {
     new ListItem(Icons.data_usage, "MMKV使用", "腾讯MMKV键值对使用", '/utils/mmkv'),
     new ListItem(Icons.data_usage, "SharedPreferences使用",
         "SharedPreferences键值对使用", '/utils/shared_preferences'),
+    new ListItem(
+        Icons.data_usage, "Sqlite数据库使用", "Sqlite增删改查操作", '/utils/sqlite'),
   ];
 
   //拓展列表
