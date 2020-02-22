@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout_demo/router/route.dart';
+import 'package:flutter_layout_demo/splash.dart';
 import 'package:flutter_layout_demo/utils/shared_preferences.dart';
-import 'home.dart';
 
 void main() => {runApp(MyApp()), init()};
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainHomePage(),
+      home: SplashPage(),
       //  路由
       routes: RouteMap.routes,
     );
