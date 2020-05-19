@@ -1,3 +1,10 @@
+/*
+ * @Author: zhuchuanyong
+ * @Date: 2020-05-10 14:07:26
+ * @LastEditors: zhuchuanyong
+ * @LastEditTime: 2020-05-19 23:03:20
+ * @FilePath: \lib\router\route.dart
+ */ 
 import 'package:flutter/material.dart';
 import 'package:flutter_layout_demo/home.dart';
 import 'package:flutter_layout_demo/page/utils/mmkv.dart';
@@ -10,6 +17,7 @@ import 'package:flutter_layout_demo/page/widget/dialog.dart';
 import 'package:flutter_layout_demo/page/widget/button.dart';
 import 'package:flutter_layout_demo/page/widget/drawer.dart';
 import 'package:flutter_layout_demo/page/widget/image.dart';
+import 'package:flutter_layout_demo/page/widget/page_view.dart';
 import 'package:flutter_layout_demo/page/widget/tab.dart';
 import 'package:flutter_layout_demo/page/widget/text.dart';
 import 'package:flutter_layout_demo/view/ViewPageItem.dart';
@@ -19,7 +27,7 @@ class RouteMap {
   static final routes = <String, WidgetBuilder>{
     '/home': (BuildContext context) => new MainHomePage(),
 
-    //=============================================================//
+    //==========================widget===================================//
 
     '/widget/button': (BuildContext context) => new ButtonPage(),
     '/widget/text': (BuildContext context) => new TextPage(),
@@ -28,8 +36,9 @@ class RouteMap {
     '/widget/navigation': (BuildContext context) => new BottomNavigationBarPage(),
     '/widget/dialog': (BuildContext context) => new DialogPage(),
     '/widget/drawer': (BuildContext context) => new DrawerPage(),
+    '/widget/pageview': (BuildContext context) => new PageViewPage(),
 
-    //=============================================================//
+    //===========================工具==================================//
 
     '/utils/net': (BuildContext context) => new NetRequestPage(),
     '/utils/toast': (BuildContext context) => new ToastPage(),
@@ -49,6 +58,7 @@ class RouteMap {
     new ListItem(Icons.navigation, "底部导航栏", "简单的底部导航栏使用", '/widget/navigation'),
     new ListItem(Icons.notifications, "对话框", "简单的对话框使用", '/widget/dialog'),
     new ListItem(Icons.menu, "侧滑菜单", "简单侧滑菜单的使用", '/widget/drawer'),
+    new ListItem(Icons.menu, "pageview", "简单pageview的使用", '/widget/pageview'),
   ];
 
   // 工具列表
