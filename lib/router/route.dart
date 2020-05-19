@@ -2,7 +2,7 @@
  * @Author: zhuchuanyong
  * @Date: 2020-05-10 14:07:26
  * @LastEditors: zhuchuanyong
- * @LastEditTime: 2020-05-19 23:03:20
+ * @LastEditTime: 2020-05-20 00:20:49
  * @FilePath: \lib\router\route.dart
  */ 
 import 'package:flutter/material.dart';
@@ -16,6 +16,7 @@ import 'package:flutter_layout_demo/page/widget/bottom_navigation_bar.dart';
 import 'package:flutter_layout_demo/page/widget/dialog.dart';
 import 'package:flutter_layout_demo/page/widget/button.dart';
 import 'package:flutter_layout_demo/page/widget/drawer.dart';
+import 'package:flutter_layout_demo/page/widget/gridview.dart';
 import 'package:flutter_layout_demo/page/widget/image.dart';
 import 'package:flutter_layout_demo/page/widget/page_view.dart';
 import 'package:flutter_layout_demo/page/widget/tab.dart';
@@ -37,6 +38,7 @@ class RouteMap {
     '/widget/dialog': (BuildContext context) => new DialogPage(),
     '/widget/drawer': (BuildContext context) => new DrawerPage(),
     '/widget/pageview': (BuildContext context) => new PageViewPage(),
+    '/widget/gridview': (BuildContext context) => new GridViewPage(),
 
     //===========================工具==================================//
 
@@ -59,6 +61,7 @@ class RouteMap {
     new ListItem(Icons.notifications, "对话框", "简单的对话框使用", '/widget/dialog'),
     new ListItem(Icons.menu, "侧滑菜单", "简单侧滑菜单的使用", '/widget/drawer'),
     new ListItem(Icons.menu, "pageview", "简单pageview的使用", '/widget/pageview'),
+    new ListItem(Icons.menu, "gridview", "简单grid的使用", '/widget/gridview'),
   ];
 
   // 工具列表
