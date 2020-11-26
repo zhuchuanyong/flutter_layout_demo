@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_widget/model/post.dart';
+
+import 'demo/listView_demo.dart';
 
 void main() {
   runApp(App());
@@ -11,6 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(primarySwatch: Colors.yellow),
     );
@@ -20,51 +22,47 @@ class App extends StatelessWidget {
 class Home extends StatelessWidget {
   const Home({Key key}) : super(key: key);
 
-  Widget _listItemBuilder(BuildContext context, int index) {
-    return Container(
-      color: Colors.white,
-      margin: EdgeInsets.all(8.0),
-      child: Column(
-        children: <Widget>[
-          Image.network(posts[index].imageUrl),
-          SizedBox(height: 16.0),
-          Text(
-            posts[index].title,
-            style: Theme.of(context).textTheme.headline6,
-          ),
-          Text(posts[index].author,
-              style: Theme.of(context).textTheme.subtitle1),
-          SizedBox(height: 16.0),
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            tooltip: "Navigration",
+            onPressed: () => debugPrint('button'),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              tooltip: "search",
+              onPressed: () => debugPrint('search'),
+            ),
+            IconButton(
+              icon: Icon(Icons.more_horiz),
+              tooltip: "search",
+              onPressed: () => debugPrint('more_horiz'),
+            ),
+          ],
           title: Text("Number one"),
+          bottom: TabBar(
+            unselectedLabelColor: Colors.black38, // 未选中颜色
+            indicatorColor: Colors.black54, // 指示器颜色==> 下划线
+            indicatorSize: TabBarIndicatorSize.label, // 指示器长度
+            tabs: [
+              Tab(icon: Icon(Icons.local_florist)),
+              Tab(icon: Icon(Icons.change_history)),
+              Tab(icon: Icon(Icons.directions_bike)),
+            ],
+          ),
         ),
-        body: ListView.builder(
-          itemBuilder: _listItemBuilder,
-          itemCount: posts.length,
-        ));
-  }
-}
-
-class hello extends StatelessWidget {
-  const hello({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "Hello 2",
-        textDirection: TextDirection.ltr,
-        style: TextStyle(
-            fontSize: 40.0, fontWeight: FontWeight.bold, color: Colors.yellow),
+        body: TabBarView(children: [
+          Icon(Icons.local_florist, size: 128.0, color: Colors.black12),
+          Icon(Icons.change_history, size: 128.0, color: Colors.black12),
+          Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
+        ]),
       ),
     );
   }
