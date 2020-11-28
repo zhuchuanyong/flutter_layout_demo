@@ -4,6 +4,14 @@ import 'package:learn_widget/model/post.dart';
 class ViewDemo extends StatelessWidget {
   const ViewDemo({Key key}) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return PageViewBuilderDemo();
+  }
+}
+
+class PageViewBuilderDemo extends StatelessWidget {
+  const PageViewBuilderDemo({Key key}) : super(key: key);
   Widget _pageItemBuilder(BuildContext context, int index) {
     return Stack(
       children: [
