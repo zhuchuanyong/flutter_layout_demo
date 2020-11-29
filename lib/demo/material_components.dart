@@ -5,7 +5,7 @@ import './popup_menu_button_demo.dart';
 import './form_demo.dart';
 import './checkbox_demo.dart';
 import './radio_demo.dart';
-// import './switch_demo.dart';
+import './switch_demo.dart';
 // import './slider_demo.dart';
 // import './datetime_demo.dart';
 // import './simple_dialog_demo.dart';
@@ -41,7 +41,7 @@ class MaterialComponents extends StatelessWidget {
           // ListItem(title: 'SimpleDialog', page: SimpleDialogDemo()),
           // ListItem(title: 'Date & Time', page: DateTimeDemo()),
           // ListItem(title: 'Slider', page: SliderDemo()),
-          // ListItem(title: 'Switch', page: SwitchDemo()),
+          ListItem(title: 'Switch', page: SwitchDemo()),
           ListItem(title: 'Radio', page: RadioDemo()),
           ListItem(title: 'Checkbox', page: CheckboxDemo()),
           ListItem(title: 'Form', page: FormDemo()),
