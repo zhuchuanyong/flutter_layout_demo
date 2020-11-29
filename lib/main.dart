@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'demo/Navigator_demo.dart';
 import 'demo/basic_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
@@ -19,8 +20,15 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: NavigatorDemo(),
+      // home: Home(),
       // home: SliverDemo(),
+      initialRoute: "/",
+      routes: {
+        // "/": (context) => NavigatorDemo(),
+        "/": (context) => Home(),
+        "/about": (context) => RoutePage(title: "About"),
+      },
       theme: ThemeData(primarySwatch: Colors.yellow),
     );
   }
