@@ -5,6 +5,7 @@ import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/listView_demo.dart';
+import 'demo/silver_demo.dart';
 import 'demo/view_demo.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
+      // home: SliverDemo(),
       theme: ThemeData(primarySwatch: Colors.yellow),
     );
   }
@@ -69,7 +71,8 @@ class Home extends StatelessWidget {
             ListViewDemo(),
             BasicDemo(),
             LayoutDemo(),
-            ViewDemo(),
+            SliverDemo(),
+            // ViewDemo(),
           ],
         ),
         drawer: DrawerDemo(),
