@@ -4,6 +4,7 @@ import 'demo/Navigator_demo.dart';
 import 'demo/basic_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
+import 'demo/form_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/listView_demo.dart';
 import 'demo/silver_demo.dart';
@@ -26,8 +27,9 @@ class App extends StatelessWidget {
       initialRoute: "/",
       routes: {
         // "/": (context) => NavigatorDemo(),
-        "/": (context) => Home(),
+        "/": (context) => FormDemo(),
         "/about": (context) => RoutePage(title: "About"),
+        "/form": (context) => FormDemo(),
       },
       theme: ThemeData(primarySwatch: Colors.yellow),
     );
