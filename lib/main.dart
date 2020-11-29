@@ -7,6 +7,7 @@ import 'demo/drawer_demo.dart';
 import 'demo/form_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/listView_demo.dart';
+import 'demo/material_components.dart';
 import 'demo/silver_demo.dart';
 import 'demo/view_demo.dart';
 
@@ -27,9 +28,10 @@ class App extends StatelessWidget {
       initialRoute: "/",
       routes: {
         // "/": (context) => NavigatorDemo(),
-        "/": (context) => FormDemo(),
+        "/": (context) => MaterialComponents(),
         "/about": (context) => RoutePage(title: "About"),
         "/form": (context) => FormDemo(),
+        "/materialComponents": (context) => MaterialComponents(),
       },
       theme: ThemeData(primarySwatch: Colors.yellow),
     );
