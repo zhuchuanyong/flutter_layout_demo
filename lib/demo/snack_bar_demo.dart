@@ -2,7 +2,7 @@
  * @Author: zhuchuanyong
  * @Date: 2020-12-05 01:12:01
  * @LastEditors: zhuchuanyong
- * @LastEditTime: 2020-12-05 01:19:19
+ * @LastEditTime: 2020-12-05 01:22:35
  * @FilePath: \lib\demo\snack_bar_demo.dart
  */
 import 'package:flutter/material.dart';
@@ -44,15 +44,16 @@ class SnackBarButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-        onPressed: () {
-          Scaffold.of(context).showSnackBar(SnackBar(
-            content: Text('processing...'),
-            action: SnackBarAction(
-              label: "ok",
-              onPressed: () {},
-            ),
-          ));
-        },
-        child: Text('SnackBarButton'));
+      onPressed: () {
+        Scaffold.of(context).showSnackBar(SnackBar(
+          content: Text('processing...'),
+          action: SnackBarAction(
+            label: "ok",
+            onPressed: () {},
+          ),
+        ));
+      },
+      child: Text('SnackBarButton'),
+    );
   }
 }
